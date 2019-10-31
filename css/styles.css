@@ -1,3 +1,23 @@
-/* .result {
+.result {
   display: none;
-} */
+}
+body {
+  text-align: center;
+  background-image: url("https://wallpaperplay.com/walls/full/f/3/b/50597.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-size: 50px;
+  color: #139128;
+  font-weight: bold;
+  text-shadow: 2px 2px black;
+}
+form {
+  font-size: 25px;
+}
+h3 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 50px;
+}
