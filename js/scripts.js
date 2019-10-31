@@ -1,4 +1,3 @@
-// var testArray = ["3","4","1", "0"]
 var oneToNine = ["1","2","3","4", "5", "6", "7", "8", "9"]
 var romanOnes = ['i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix', 'x']
 var romanTens = ['x', 'xx', 'xxx', 'xl', 'l', 'lx', 'lxx', 'lxxx', 'xc']
@@ -76,16 +75,19 @@ $(document).ready(function(){
   $(".userInput").submit(function(event){
     event.preventDefault();
     var userInput = $("#userNumber").val();
-    var testArray = userInput.split('');
-    if (testArray.length === 4) {
-      thousandsfunction(testArray);
-    } else if (testArray.length === 3) {
-      hundredsfunction(testArray);
-    } else if (testArray.length === 2) {
-      tensfunction(testArray);
-    } else if (testArray.length === 1) {
-      onesfunction(testArray);
+    var userNumbers = userInput.split('');
+    if (userNumbers.length === 4) {
+      thousandsfunction(userNumbers);
+    } else if (userNumbers.length === 3) {
+      hundredsfunction(userNumbers);
+    } else if (userNumbers.length === 2) {
+      tensfunction(userNumbers);
+    } else if (userNumbers.length === 1) {
+      onesfunction(userNumbers);
     };
-    $("#userResult").text(userArray.join('').toUpperCase());
-  });
+    $(".result").show();
+    var result = userArray.join('').toUpperCase();
+    $("h2").html(result);
+    userArray = [];
+});
 });
