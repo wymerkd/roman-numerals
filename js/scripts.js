@@ -25,17 +25,52 @@
 //   }
 // }
 // }
-var testArray = ["9","0"]
+var testArray = ["3","4","1", "0"]
 var oneToNine = ["1","2","3","4", "5", "6", "7", "8", "9"]
+var romanOnes = ['i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix', 'x']
 var romanTens = ['x', 'xx', 'xxx', 'xl', 'l', 'lx', 'lxx', 'lxxx', 'xc']
+var romanHundreds = ['c', 'cc', 'ccc', 'cd', 'd', 'dc', 'dcc', 'dccc', 'cm' ]
+romanThousands = ['m', 'mm', 'mmm']
 var userArray = []
+
+
+
+var tensfunction = function(tens){
+  for (i = 0; i < oneToNine.length; i++){
+    if (testArray.length === 4 && oneToNine[i] == testArray[0] && testArray[0] < 4){
+    userArray.push(romanThousands[i])
+    for (i = 0; i < oneToNine.length; i++){
+      if (testArray.length === 4 && oneToNine[i] == testArray[1]){
+      userArray.push(romanHundreds[i])
+      for (i = 0; i < oneToNine.length; i++){
+        if (testArray.length === 4 && oneToNine[i] == testArray[1]){
+        userArray.push(romanTens[i])
+        for (i = 0; i < oneToNine.length; i++){
+          if (testArray.length === 4 && oneToNine[i] == testArray[1]){
+          userArray.push(romanOnes[i])
+        console.log(userArray)
+      }
+    }
+    }
+  }
+    console.log(userArray)
+  }
+}
+}
+}
+}
+
 
 var tensfunction = function(tens){
   for (i = 0; i < oneToNine.length; i++){
     if (testArray.length === 2 && oneToNine[i] == testArray[0]){
     userArray.push(romanTens[i])
+    for (i = 0; i < oneToNine.length; i++){
+      if (testArray.length === 2 && oneToNine[i] == testArray[1]){
+      userArray.push(romanOnes[i])
     console.log(userArray)
   }
+}
 }
 }
 }
